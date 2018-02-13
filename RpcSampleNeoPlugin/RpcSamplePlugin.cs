@@ -7,7 +7,7 @@ namespace RpcSampleNeoPlugin
     {
         public override JObject RpcCall(NeoRpcPluginArgs args)
         {
-            if (string.Compare(args.Method, "dummy") == 0)
+            if (string.Compare(args.Method, "dummy", true) == 0)
             {
                 args.Handle = true;
 
