@@ -3,7 +3,7 @@ using Neo.Plugins;
 
 namespace RpcSampleNeoPlugin
 {
-    public class NeoRpcSample : NeoRpcPlugin
+    public class RpcSamplePlugin : NeoRpcPlugin
     {
         public override JObject RpcCall(NeoRpcPluginArgs args)
         {

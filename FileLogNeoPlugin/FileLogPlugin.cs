@@ -5,7 +5,7 @@ using System.Runtime.ExceptionServices;
 
 namespace FileLogNeoPlugin
 {
-    public class NeoFileLogger : NeoLogPlugin
+    public class FileLogPlugin : NeoLogPlugin
     {
         /// <summary>
         /// File path
