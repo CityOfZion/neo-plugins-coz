@@ -7,6 +7,8 @@ namespace FileLogNeoPlugin
 {
     public class FileLogPlugin : NeoLogPlugin
     {
+        object Dummy = new object();
+
         /// <summary>
         /// File path
         /// </summary>
@@ -51,7 +53,7 @@ namespace FileLogNeoPlugin
         {
             try
             {
-                lock (this)
+                lock (Dummy)
                 {
                     File.AppendAllText(GetLogFilePath(), "[" + DateTime.Now.ToString() + "] - " + message + Environment.NewLine);
                 }
