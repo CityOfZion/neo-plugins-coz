@@ -10,12 +10,13 @@ namespace FileLogNeoPlugin
         /// <summary>
         /// File path
         /// </summary>
-        public string LogFilePath { get; set; }
+        public string GetLogFilePath()
+        {
+            return Path.Combine(".", "log_" + DateTime.Now.ToString("yyyy-MM-dd") + ".txt");
+        }
 
         public override bool Load()
         {
-            LogFilePath = Path.Combine(".", "log.txt");
-
             AppDomain.CurrentDomain.FirstChanceException += CurrentDomain_FirstChanceException;
             AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
 
@@ -52,7 +53,7 @@ namespace FileLogNeoPlugin
             {
                 lock (this)
                 {
-                    File.AppendAllText(LogFilePath, DateTime.Now.ToString() + " - " + message + Environment.NewLine);
+                    File.AppendAllText(GetLogFilePath(), "[" + DateTime.Now.ToString() + "] - " + message + Environment.NewLine);
                 }
             }
             catch { }
