@@ -46,13 +46,16 @@ namespace FileLogNeoPlugin
         {
             if (error == null) return;
 
-            Log(error.ToString());
+            Log("[ERROR] " + error.ToString());
         }
 
         public override void Log(string message)
         {
             try
             {
+                message = message.Replace("\n", "\t");
+                message = message.Replace("\r", "");
+
                 lock (Dummy)
                 {
                     File.AppendAllText(GetLogFilePath(), "[" + DateTime.Now.ToString() + "] - " + message + Environment.NewLine);
