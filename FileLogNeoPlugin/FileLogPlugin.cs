@@ -14,11 +14,17 @@ namespace FileLogNeoPlugin
         /// </summary>
         public string GetLogFilePath()
         {
-            return Path.Combine(".", "log_" + DateTime.Now.ToString("yyyy-MM-dd") + ".txt");
+            return Path.Combine(".", "log", "log_" + DateTime.Now.ToString("yyyy-MM-dd") + ".txt");
         }
 
         public override bool Load()
         {
+            // Create directory for logs
+
+            string path = Path.GetDirectoryName(GetLogFilePath());
+            if (!Directory.Exists(path))
+                Directory.CreateDirectory(path);
+
             AppDomain.CurrentDomain.FirstChanceException += CurrentDomain_FirstChanceException;
             AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
 
