@@ -14,7 +14,7 @@ namespace FileLogNeoPlugin
         /// </summary>
         public string GetLogFilePath()
         {
-            return Path.Combine(".", "log", "log_" + DateTime.Now.ToString("yyyy-MM-dd") + ".txt");
+            return Path.Combine(".", "Logs", "log_" + DateTime.Now.ToString("yyyy-MM-dd") + ".txt");
         }
 
         public override bool Load()
