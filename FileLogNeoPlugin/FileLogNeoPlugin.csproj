@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\neo\neo\neo.csproj" />
+    <PackageReference Include="Neo" Version="2.10.3" />
   </ItemGroup>
-
 </Project>

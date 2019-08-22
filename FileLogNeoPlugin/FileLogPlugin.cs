@@ -1,23 +1,17 @@
-﻿using Neo.Plugins;
+﻿// FileLogNeoPlugin by shargon
+// Log all neo-cli exceptions to a file
+
 using System;
 using System.IO;
 using System.Runtime.ExceptionServices;
 
-namespace FileLogNeoPlugin
+namespace Neo.Plugins
 {
-    public class FileLogPlugin : NeoLogPlugin
+    public class FileLogPlugin : Plugin, ILogPlugin
     {
         object Dummy = new object();
 
-        /// <summary>
-        /// File path
-        /// </summary>
-        public string GetLogFilePath()
-        {
-            return Path.Combine(".", "Logs", "logPlugin_" + DateTime.Now.ToString("yyyy-MM-dd") + ".txt");
-        }
-
-        public override bool Load()
+        public FileLogPlugin()
         {
             // Create directory for logs
 
@@ -27,35 +21,40 @@ namespace FileLogNeoPlugin
 
             AppDomain.CurrentDomain.FirstChanceException += CurrentDomain_FirstChanceException;
             AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
-
-            return base.Load();
         }
-        public override void Unload()
+
+        ~FileLogPlugin()
         {
             AppDomain.CurrentDomain.FirstChanceException -= CurrentDomain_FirstChanceException;
             AppDomain.CurrentDomain.UnhandledException -= CurrentDomain_UnhandledException;
+        }
 
-            base.Unload();
+        public override void Configure()
+        {
+        }
+
+        public string GetLogFilePath()
+        {
+            return Path.Combine(".", "Logs", "logPlugin_" + DateTime.Now.ToString("yyyy-MM-dd") + ".txt");
         }
 
         void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
-            Log((Exception)e.ExceptionObject);
+            MyLog((Exception)e.ExceptionObject);
         }
 
         void CurrentDomain_FirstChanceException(object sender, FirstChanceExceptionEventArgs e)
         {
-            Log(e.Exception);
+            MyLog(e.Exception);
         }
 
-        public override void Log(Exception error)
+        public void MyLog(Exception error)
         {
             if (error == null) return;
-
-            Log("[ERROR] " + error.ToString());
+            Log("FileLogPlugin", LogLevel.Error, error.ToString());
         }
-
-        public override void Log(string message)
+        
+        void ILogPlugin.Log(string source, LogLevel level, string message)
         {
             try
             {
@@ -64,7 +63,8 @@ namespace FileLogNeoPlugin
 
                 lock (Dummy)
                 {
-                    File.AppendAllText(GetLogFilePath(), "[" + DateTime.Now.ToString() + "] - " + message + Environment.NewLine);
+                    string m = $"[{DateTime.Now.ToString()}] {source}: [{Enum.GetName(typeof(LogLevel), level)}] - {message}{Environment.NewLine}";
+                    File.AppendAllText(GetLogFilePath(), m);
                 }
             }
             catch { }
