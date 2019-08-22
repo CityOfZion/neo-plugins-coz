@@ -1,11 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Version>2.10.3</Version>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Neo.Plugins</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\neo\neo\neo.csproj" />
+    <PackageReference Include="Neo" Version="2.10.3" />
   </ItemGroup>
 
 </Project>
