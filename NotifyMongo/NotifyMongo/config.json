@@ -1,0 +1,72 @@
+﻿{
+  "PluginConfiguration": {
+    "MongoHost": "127.0.0.1",
+    "MongoPort": "27017",
+    "MongoUser": "",
+    "MongoPass": "",
+    "Contracts": [
+      {
+        "Scripthash": "9aff1e08aea2048a26a3d2ddbb3df495b932b1e7",
+        "Actions": [
+          {
+            "OnNotification": "transfer",
+            "Action": "create",
+            "Collection": "transfers",
+            "Keyindex": -1,
+            "Schema": [
+              {"Name": "from_address", "Type": "address"},
+              {"Name": "to_address", "Type": "address"},
+              {"Name": "amount", "Type": "integer"}
+            ]
+          }
+        ]
+      },
+      {
+        "Scripthash": "642dc1c0e7c3edbfa5d3b6964afe4aca428cfc9c",
+        "Actions": [
+          {
+            "OnNotification": "auction_created",
+            "Action": "create",
+            "Collection": "auctions",
+            "Keyindex": 1,
+            "Schema": [
+              {"Name": "token_id", "Type": "integer"},
+              {"Name": "start_price", "Type": "integer"},
+              {"Name": "end_price", "Type": "integer"},
+              {"Name": "start_block", "Type": "integer"},
+              {"Name": "end_block", "Type": "integer"}
+            ]
+          },
+          {
+            "OnNotification": "auction_canceled",
+            "Action": "delete",
+            "Collection": "auctions",
+            "Keyindex": 1,
+            "Schema": [
+              {"Name": "token_id", "Type": "integer"}
+            ]
+          },
+          {
+            "OnNotification": "auction_completed",
+            "Action": "create",
+            "Collection": "completed",
+            "Keyindex": 1,
+            "Schema": [
+              {"Name": "token_id", "Type": "integer"},
+              {"Name": "final_bid", "Type": "integer"}
+            ]
+          },
+          {
+            "OnNotification": "auction_completed",
+            "Action": "delete",
+            "Collection": "auctions",
+            "Keyindex": 1,
+            "Schema": [
+              {"Name": "token_id", "Type": "integer"}
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

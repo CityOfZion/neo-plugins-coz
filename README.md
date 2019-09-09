@@ -1,20 +1,40 @@
-# Neo-Plugins
+# neo-plugins-coz
 
-This repository store examples of Neo plugins
+This repository stores Neo plugins created by the community
 
-We have two of them:
 
-* [FileLogNeoPlugin](https://github.com/CityOfZion/Neo-Plugins/tree/master/FileLogNeoPlugin)
+* [FileLogNeoPlugin](https://github.com/CityOfZion/neo-plugins-coz/tree/master/FileLogNeoPlugin)
 
   Save logs in a file
   
-* [RpcSampleNeoPlugin](https://github.com/CityOfZion/Neo-Plugins/tree/master/RpcSampleNeoPlugin)
+* [RpcSampleNeoPlugin](https://github.com/CityOfZion/neo-plugins-coz/tree/master/RpcSampleNeoPlugin)
 
   This project show how is possible to create a dummy call for rpc request
 
+* [LocalDebugger](https://github.com/CityOfZion/neo-plugins-coz/tree/master/LocalDebugger)
 
-# Compile
+  Debug contract execution in the Neo VM in-situ
 
-This projects requires the plugin System requested on (https://github.com/neo-project/neo/pull/174/files)
+* [NeoConsensusMonitor](https://github.com/CityOfZion/neo-plugins-coz/tree/master/NeoConsensusMonitor)
+  
+  Monitor the health of Neo consensus nodes
 
-Also, require to set acordinly `<ProjectReference Include="..\..\neo\neo\neo.csproj" />` to the right path of this branch source code
+* [NeoPubSub](https://github.com/CityOfZion/neo-plugins-coz/tree/master/NeoPubSub)
+
+  Publish raw smart contract events to a Redis PubSub queue
+
+* [NotifyMongo](https://github.com/CityOfZion/neo-plugins-coz/tree/master/NotifyMongo)
+
+  Publish structured smart contract events to a Mongo database
+
+* [RpcFaucet](https://github.com/CityOfZion/neo-plugins-coz/tree/master/RpcFaucet)
+
+  A NEP-5 token faucet implemented as an RPC method
+
+* [RpcFindStorage](https://github.com/CityOfZion/neo-plugins-coz/tree/master/RpcFindStorage)
+
+  Search smart contract storage over RPC
+
+* [VerboseVerify](https://github.com/CityOfZion/neo-plugins-coz/tree/master/VerboseVerify)
+
+  Add verbose diagnostic information to transaction verification failure messages

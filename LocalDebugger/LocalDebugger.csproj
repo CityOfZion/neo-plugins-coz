@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Version>2.10.3</Version>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Neo.Plugins</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Neo" Version="2.10.3" />
+    <PackageReference Include="Neo.VM" Version="2.4.3" />
+  </ItemGroup>
+</Project>

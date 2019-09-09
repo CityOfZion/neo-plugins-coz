@@ -1,0 +1,84 @@
+{
+  "PluginConfiguration": {
+    "ConsensusNodes": [
+      {
+        "PublicKey": "025bdf3f181f53e9696227843950deb72dcd374ded17c057159513c3d0abe20b64",
+        "Name": "COZ",
+        "MainNetNode": true,
+        "TestNetNode": true
+      },
+      {
+        "PublicKey": "035e819642a8915a2572f972ddbdbe3042ae6437349295edce9bdc3b8884bbf9a3",
+        "Name": "KPN",
+        "MainNetNode": true,
+        "TestNetNode": false
+      },
+      {
+        "PublicKey": "02df48f60e8f3e01c48ff40b9b7f1310d7a8b2a193188befe1c2e3df740e895093",
+        "Name": "NF1",
+        "MainNetNode": true,
+        "TestNetNode": false
+      },
+      {
+        "PublicKey": "024c7b7fb6c310fccf1ba33b082519d82964ea93868d676662d4a59ad548df0e7d",
+        "Name": "NF2",
+        "MainNetNode": true,
+        "TestNetNode": false
+      },
+      {
+        "PublicKey": "02ca0e27697b9c248f6f16e085fd0061e26f44da85b58ee835c110caa5ec3ba554",
+        "Name": "NF3",
+        "MainNetNode": true,
+        "TestNetNode": false
+      },
+      {
+        "PublicKey": "03b209fd4f53a7170ea4444e0cb0a6bb6a53c2bd016926989cf85f9b0fba17a70c",
+        "Name": "NF4",
+        "MainNetNode": true,
+        "TestNetNode": false
+      },
+      {
+        "PublicKey": "03b8d9d5771d8f513aa0869b9cc8d50986403b78c6da36890638c3d46a5adce04a",
+        "Name": "NF5",
+        "MainNetNode": true,
+        "TestNetNode": false
+      },
+      {
+        "PublicKey": "03028007d683ceb4dc9084300d0cf16fe6d47a726e586bf3d63559cec133055652",
+        "Name": "TEST1",
+        "MainNetNode": false,
+        "TestNetNode": true
+      },
+      {
+        "PublicKey": "030ef96257401b803da5dd201233e2be828795672b775dd674d69df83f7aec1e36",
+        "Name": "TEST2",
+        "MainNetNode": false,
+        "TestNetNode": true
+      },
+      {
+        "PublicKey": "0266b588e350ab63b850e55dbfed0feeda44410a30966341b371014b803a15af07",
+        "Name": "TEST3",
+        "MainNetNode": false,
+        "TestNetNode": true
+      },
+      {
+        "PublicKey": "03c089d7122b840a4935234e82e26ae5efd0c2acb627239dc9f207311337b6f2c1",
+        "Name": "TEST4",
+        "MainNetNode": false,
+        "TestNetNode": true
+      },
+      {
+        "PublicKey": "03fd95a9cb3098e6447d0de9f76cc97fd5e36830f9c7044457c15a0e81316bf28f",
+        "Name": "TEST5",
+        "MainNetNode": false,
+        "TestNetNode": true
+      },
+      {
+        "PublicKey": "03fea219d4ccfd7641cebbb2439740bb4bd7c4730c1abd6ca1dc44386533816df9",
+        "Name": "TEST6",
+        "MainNetNode": false,
+        "TestNetNode": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "PluginConfiguration": {
+    "PreloadBlockBreakPoints" :
+    [
+        2956537
+    ],
+    "PreloadTxBreakPoints" :
+    [
+        "3e229676b5a245c3d3929ddd5ea853027834ecf5bef1d2f6f6afedefebdeab0b",
+        "747f184d72e4fac0e8852a559af659bc6db3fe2f65f6a6e9b8749f31728ba2d7",
+        "fce6e02e7e5344a871f432854b2333bf327da39f8b7c1893d0abdce90b5f9837"
+    ],
+    "PreloadScriptBreakPoints" :
+    {
+        "ddb3e03e78cd3d2fc15240f22b5f245e0e55edd5": 0
+    },
+    "ActivateOnStart" : true
+  }
+}
+

@@ -1,0 +1,9 @@
+﻿{
+  "PluginConfiguration": {
+    "RedisHost": "127.0.0.1",
+    "RedisPort": "6379",
+    "WatchContracts": [
+      "0x91b83e96f2a7c4fdf0c1688441ec61986c7cae26"
+    ]
+  }
+}
