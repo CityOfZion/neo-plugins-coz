@@ -6,12 +6,14 @@ A plugin for neo-cli to publish smart contract events to a Redis PubSub queue
 hal0x2328
 
 ### Installation
+```bash
 git clone https://github.com/neo-plugins-coz/NeoPubSub
 cd NeoPubSub
 dotnet publish -c Release
 cp -r ./NeoPubSub {neo-cli folder}/Plugins
 cp ./bin/Release/netstandard2.0/publish/NeoPubSub.dll {neo-cli folder}/Plugins
 cp ./bin/Release/netstandard2.0/publish/Redis*.dll {neo-cli folder}
+```
 
 ### Example PubSub session:
 ```
