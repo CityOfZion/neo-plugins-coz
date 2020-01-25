@@ -47,8 +47,7 @@ namespace Neo.Plugins
                 var txid = appExec.Transaction.Hash.ToString();
                 foreach (ApplicationExecutionResult p in appExec.ExecutionResults)
                 {
-
-                    if (p.VMState.ToString() == "HALT, BREAK")
+                    if (!p.VMState.HasFlag(VMState.FAULT))
                     {
                         foreach (NotifyEventArgs q in p.Notifications)
                         {
