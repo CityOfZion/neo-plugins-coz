@@ -11,8 +11,7 @@ git clone https://github.com/neo-plugins-coz/NeoPubSub
 cd NeoPubSub
 dotnet publish -c Release
 cp -r ./NeoPubSub {neo-cli folder}/Plugins
-cp ./bin/Release/netstandard2.0/publish/NeoPubSub.dll {neo-cli folder}/Plugins
-cp ./bin/Release/netstandard2.0/publish/Redis*.dll {neo-cli folder}
+cp ./bin/Release/netstandard2.0/publish/{NeoPubSub,StackExchange.Redis,System.Threading.Channels,System.Diagnostics.PerformanceCounter,Pipelines.Sockets.Unofficial}.dll {neo-cli folder}/Plugins
 ```
 
 ### Example PubSub session:
