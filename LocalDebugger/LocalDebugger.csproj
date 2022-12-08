@@ -5,7 +5,7 @@
     <RootNamespace>Neo.Plugins</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Neo" Version="2.10.3" />
