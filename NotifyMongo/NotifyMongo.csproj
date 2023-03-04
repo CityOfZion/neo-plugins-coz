@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <PackageReference Include="Neo" Version="2.10.3" />
-    <PackageReference Include="MongoDB.Driver" Version="2.9.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.19.0" />
   </ItemGroup>
 
   <ItemGroup>
